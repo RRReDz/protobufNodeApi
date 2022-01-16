@@ -39,8 +39,6 @@ async function run() {
     })
     
     app.listen(8080)
-
-    app.catch
 }
 
 run()
