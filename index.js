@@ -30,11 +30,6 @@ async function run() {
 
     app.get('/developers', (_, res) => {
         const encodedMessage = GetDevelopersResponse.encode(message).finish()
-
-        const payloadMessage = GetDevelopersResponse.decode(encodedMessage)
-        const payload = GetDevelopersResponse.toObject(payloadMessage)
-        console.log(payload)
-
         res.status(200).send(encodedMessage)
     })
     
